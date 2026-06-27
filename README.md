@@ -1,102 +1,35 @@
-# SparkTrack Core
+# SparkTrack
 
-SparkTrack is a local-first Windows desktop application for personal intelligence.
+**Personal Intelligence Operating System (PIOS)**
 
-It is not a productivity tracker, web app, mobile app, or cloud service. It is a PySide6 desktop operating environment for learning, creating, reflecting, and building across many domains of life.
+Local-first desktop application for long-term personal evolution.
 
-## Project Philosophy
+## Constitution
 
-SparkTrack's direction is attention-first:
+The single source of truth is **`PROJECT.md`** — read this first.
 
-- Surface what matters today.
-- Recover context when returning to a life domain.
-- Show momentum and neglect.
-- Capture bursts, artifacts, resources, and reflections locally.
-- Keep raw database management as infrastructure, not the main experience.
+It defines the complete vision, philosophy, mental model, entities, AI rules, UI principles, and development constitution.
 
-The storage ontology still matters, but the user experience should increasingly speak in Workspaces, Today Context, Attention, Focus, and Life Feed.
-
-## Screenshots
-
-Screenshots will be added as the V1.8 interface stabilizes.
-
-- Now view placeholder
-- Workspace view placeholder
-- Focus view placeholder
-- Life feed placeholder
-
-## Requirements
-
-- Python 3.12+
-- Windows 10/11 recommended
-- PySide6
-- SQLAlchemy
-- SQLite
-
-## Installation
+## Quick Start
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-```
-
-## Run
-
-```powershell
 python main.py
 ```
 
-By default, SparkTrack stores its SQLite database at:
+Database defaults to `%LOCALAPPDATA%\SparkTrack\sparktrack.db`.
 
-`%LOCALAPPDATA%\SparkTrack\sparktrack.db`
+## Key Documents
+- [`PROJECT.md`](PROJECT.md) — Master Constitution
+- [`ARCHITECTURE.md`](ARCHITECTURE.md)
+- [`ROADMAP.md`](ROADMAP.md)
+- [`CHANGELOG.md`](CHANGELOG.md)
 
-To override the database path:
+## Philosophy (Summary)
+SparkTrack is **not** a todo app, note app, or second brain.
 
-```powershell
-$env:SPARKTRACK_DB_PATH = "C:\path\to\sparktrack.db"
-python main.py
-```
+It is the operating layer between knowledge, productivity, skills, reflection, and life evolution. Local-first, desktop-first, AI-assisted, user-controlled.
 
-## Development
-
-Run a syntax check:
-
-```powershell
-python -m compileall sparktrack_core
-```
-
-Keep these out of Git:
-
-- `.venv/`
-- `__pycache__/`
-- `*.pyc`
-- `*.db`
-- `*.sqlite`
-- generated datasets
-- local settings
-
-## Architecture
-
-Important documents:
-
-- `ARCHITECTURE.md`
-- `ARCHITECT_REVIEW_V1_8.md`
-- `ROADMAP.md`
-- `CHANGELOG.md`
-- `SPARKTRACK_SYSTEM_CONTEXT.md`
-
-Core services introduced or formalized in V1.8:
-
-- `AttentionEngine`
-- `TodayService`
-- `UnifiedFeedService` with `LifeFeedItem`
-- `WorkspaceService` with `WorkspaceProfile`
-
-## Version History
-
-- V1.0: Desktop, local database, ontology, CRUD foundation.
-- V1.5: Service layer and richer operational views.
-- V1.6: Momentum, neglect, progress, and focus signals.
-- V1.7: Workspace OS direction, Now and contextual navigation.
-- V1.8: Git foundation and architectural refocus toward attention, context, focus, and retrieval.
+See `PROJECT.md` for full details.
